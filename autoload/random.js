@@ -8,10 +8,14 @@ const fs = require('fs');
 const process = require('process');
 const MessagePack = require('what-the-pack');
 
-const data = fs.readFileSync('./words.random');
-const randomWord = decode(data);
+const { decode } = MessagePack.initialize(2**22); // 4MB
+
+const dataRandom = fs.readFileSync('./words.random');
+
+const randomWords = decode(dataRandom);
 
 const args = process.argv;
+
 let wordList = [];
 const wordCount = args[2] || 150
 const language = args[3] || "english"
