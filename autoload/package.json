@@ -1,0 +1,12 @@
+{
+  "name": "TortoiseRandom",
+  "version": "1.0.0",
+  "description": "Random words for tortoise text",
+  "main": "random.js",
+  "author": "Leivince John Marte",
+  "license": "MIT",
+  "private": null,
+  "dependencies": {
+    "what-the-pack": "^2.0.3"
+  }
+}
