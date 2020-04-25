@@ -10,7 +10,7 @@ const MessagePack = require('what-the-pack');
 
 const { decode } = MessagePack.initialize(2**22); // 4MB
 
-const dataRandom = fs.readFileSync('./words.random');
+const dataRandom = fs.readFileSync(`${__dirname}/words.random`);
 
 const randomWords = decode(dataRandom);
 
